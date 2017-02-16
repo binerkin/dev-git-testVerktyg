@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
-    <title>Hejhej</title>
+    <title>Skapa Quiz</title>
 </head>
 <body>
-<h1>Jerry Test</h1>
+<header id="header">
+    <h1>Quizarn</h1>
+    <menubutton><a href="createquiz.html">Skapa Quiz</a></menubutton>
+    <menubutton><a href="viewquiz.html">Se Quiz</a></menubutton>
+</header>
+<div class="form">
+    <form class="form" method="post">
+        <h2>Titel</h2>
+        <input type="question" placeholder="Titel" id="titleform" name="titleform"/>
+        <h2>Beskrivning</h2>
+        <input type="describe" placeholder="Beskrivning" id="describeform" name="describeform"/>
+
+    </form>
+    <div class="createquestion">
+        <h2>Lägg till fråga</h2>
+        <form>
+            <h3>Typ av fråga</h3>
+            <input type="radio" name="valquestion" value="Janej"checked> Ja/Nej<br>
+            <input type="radio" name="valquestion" value="merval"> Flera val<br>
+            <input type="radio" name="valquestion" value="öppenfråga"> Öppen Fråga
+        </form>
+        <div class="namethequest">
+            <h3>Fråga:</h3>
+            <form class="form" method="post">
+                <input type="question" placeholder="Fråga" id="fråga" name="fråga"/><br>
+            </form>
+            <form>
+                <input type="radio" name="valquestion" value="Janej" checked> Ja<br>
+                <input type="radio" name="valquestion" value="merval"> Nej<br>
+            </form>
+        </div>
+        <input type="submit" value="createquestion"/>
+    </div>
+    <input type="submit" value="createtest"/>
+</div>
 </body>
 </html>
