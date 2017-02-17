@@ -1,0 +1,11 @@
+DROP PROCEDURE IF EXISTS fill_registry;
+DELIMITER $$
+CREATE PROCEDURE fill_registry(IN N INT)
+BEGIN
+
+SELECT T.name, Q.N, 
+
+
+
+END $$
+DELIMITER ;

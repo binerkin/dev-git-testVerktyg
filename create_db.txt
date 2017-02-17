@@ -23,6 +23,7 @@ CREATE TABLE userAccount(
 		triviaId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 		userID INT(20) NOT NULL,
 		name VARCHAR(20) DEFAULT "" NOT NULL,
+		triviaText VARCHAR(150) DEFAULT "",
 		questionCount INT(20) DEFAULT 0 NOT NULL,
 		triviaTime INT(20) DEFAULT 0 NOT NULL
 		);
@@ -56,4 +57,3 @@ CREATE TABLE userAccount(
 		questionId INT(20) NOT NULL,
 		studentResponse INT(20) DEFAULT 0 NOT NULL
 		);
-    
