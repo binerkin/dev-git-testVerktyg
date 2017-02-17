@@ -14,9 +14,6 @@
 
 
 <div class="formborder">
-    <aside id="questionresult">
-        <p>1. Var bor Peter?</p>
-    </aside>
     <form class="form" method="post">
         <h2>Titel</h2>
         <input type="title" placeholder="Titel" id="titleform" name="titleform"/>
@@ -26,7 +23,10 @@
     <hr>
 
 
-    <div class="questionchoice">
+    <div class="form">
+        <aside id="questionresult">
+            <p>1. Var bor Peter?</p>
+        </aside>
         <h2>Lägg till fråga</h2>
         <form>
             <h3>Typ av fråga</h3>
@@ -36,15 +36,18 @@
         </form>
     </div>
 
-        <div class="createquestion">
+        <div class="form">
             <h3>Fråga:</h3>
-            <form class="form" method="post">
+            <form class="question" method="post">
                 <textarea placeholder="Fråga" maxlength="255" name="question"></textarea>
             </form>
+            <div id="choiceresult">
             <form>
                 <input type="radio" name="answer" value="yes" checked> Ja<br>
                 <input type="radio" name="answer" value="no"> Nej<br>
             </form>
+        </div>
+
             <input type="submit" id="createquestion" value="Skapa Fråga"/>
         </div>
 

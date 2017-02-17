@@ -25,6 +25,10 @@ body{
     padding-top: 125px;
 }
 
+.form {
+    margin-left: 30px;
+}
+
 h1{
     margin-top: 0;
 }
@@ -86,6 +90,7 @@ input[type=submit]:hover {
 textarea{
     width:300px;
     padding-bottom: 75px;
+    padding-left: 0px;
 }
 
 #createquestion {
@@ -93,11 +98,19 @@ textarea{
     display: inline-block;
 }
 
+#choiceresult {
+    margin-top: 20px;
+    width: 40%;
+    height: auto;
+    border: solid;
+
+}
+
 #questionresult {
     float: right;
     border: solid;
     width: 50%;
-    height: auto;
+    height: 432px;
 }
 
 #createtest {
