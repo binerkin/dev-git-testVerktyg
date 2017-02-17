@@ -7,7 +7,7 @@ BEGIN
 
 SELECT T.name, T.triviaText, T.userId, T.triviaTime, T.questionCount
 FROM trivia AS T
-WHERE T.triviaId = iId;
+WHERE T.triviaId = tId;
 
 END $$
 DELIMITER ;
