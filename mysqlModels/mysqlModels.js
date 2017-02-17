@@ -18,6 +18,17 @@ function mysqlModels(){
         });
     };
 
+    /*function for calling stored procedure for welcome site*/
+    this.getTestWelcome = function(res){
+
+        connection.acquire(function(err, con){
+            con.query('call get_trivia(1)', function(err,result){
+                con.release;
+                res.send(result);
+            });
+        });
+    };
+
 
 }
 
