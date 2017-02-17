@@ -93,6 +93,13 @@ textarea{
     display: inline-block;
 }
 
+#questionresult {
+    float: right;
+    border: solid;
+    width: 50%;
+    height: auto;
+}
+
 #createtest {
     display: inline-block;
     float: right;
