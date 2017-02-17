@@ -1,3 +1,5 @@
+DROP DATABASE studentTrivia;
+
 CREATE DATABASE studentTrivia;
 
 USE studentTrivia;
@@ -28,9 +30,9 @@ CREATE TABLE userAccount(
   CREATE TABLE question(
 		questionId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 		triviaId INT(20) NOT NULL,
-		questionsType VARCHAR(20) DEFAULT "" NOT NULL,
+		questionType VARCHAR(20) DEFAULT "" NOT NULL,
 		questionNumber INT(20) DEFAULT 0 NOT NULL,
-		questionText VARCHAR(20) DEFAULT "" NOT NULL,
+		questionText VARCHAR(150) DEFAULT "" NOT NULL,
 		correctAnswer INT(20) DEFAULT 0 NOT NULL
 		);
 
