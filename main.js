@@ -2,21 +2,25 @@
  * Created by johan on 2017-02-16.
  */
 
-/*importera nödvändiga moduler*/
+/*Import necessary modules*/
 var express = require('express');
 var routes = require('./routes');
+var connection = require('./connection');
 
-/*skapa express objekt*/
+/*Create express object*/
 var main = express();
 
-/*konfigurera routes*/
+/*Configurate routes*/
 routes.setup(main);
 
+/*Setup connection pool*/
+connection.setupConnection();
 
-/*Dela statiska filer från public*/
+
+/*Provide static files from public directory*/
 main.use(express.static(__dirname + '/public'));
 
-/*Starta server*/
+/*Start listening at port 8000*/
 var server = main.listen(8000, function(){
 
     var host = server.address().address;
