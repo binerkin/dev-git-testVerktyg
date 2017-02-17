@@ -7,7 +7,7 @@
 </head>
 <body>
 <header id="header">
-    <h1>Quizarn</h1>
+    <a href="http://www.newton.se" id="menulogo"><img src="img/logo.png" width="70px" height="35px"></a>
     <menubutton><a href="index.html">Skapa Quiz</a></menubutton>
     <menubutton><a href="viewquiz.html">Se Quiz</a></menubutton>
 </header>
@@ -19,7 +19,7 @@
         <h2>Titel</h2>
         <input type="title" placeholder="Titel" id="titleform" name="titleform"/>
         <h2>Beskrivning</h2>
-        <textarea placeholder="Beskrivning" name="describeform"></textarea>
+        <textarea placeholder="Beskrivning" maxlength="255" name="describeform"></textarea>
     </form>
     <hr>
 
@@ -36,7 +36,7 @@
         <div class="createquestion">
             <h3>Fråga:</h3>
             <form class="form" method="post">
-                <textarea placeholder="Fråga" name="question"></textarea>
+                <textarea placeholder="Fråga" maxlength="255" name="question"></textarea>
             </form>
             <form>
                 <input type="radio" name="answer" value="yes" checked> Ja<br>

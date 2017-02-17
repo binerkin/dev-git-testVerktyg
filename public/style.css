@@ -1,29 +1,57 @@
 body{
     margin: 0px;
 }
+
 #header{
-    margin: 0%;
-    padding-bottom: 4px;
+    display: inline-block;
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
     border: solid;
+    border: 1px;
+    border-color: #231F20;
     position: fixed;
-    background-color: aquamarine;
+    background-color: #231F20;
     width:100%;
+}
 
+#menulogo {
+    float: left;
+    margin-right: 5px;
+    padding-top: 4px;
+}
 
+.formborder {
+    padding-top: 125px;
 }
 
 h1{
     margin-top: 0;
 }
+
 a{
     text-decoration: none;
+    color: white;
+}
+
+a:hover {
+
 }
 
 menubutton{
-    border:solid;
-    padding: 4px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    border: solid;
+    border-width: 1px;
+    padding: 10px;
+    top: 0px;
+    margin: 0px;
     display: inline-block;
+    background-color: #231F20;
+    color: grey;
+}
+
+menubutton:hover{
+    background-color: grey;
 }
 
 input[type=text], select {
@@ -58,4 +86,14 @@ input[type=submit]:hover {
 textarea{
     width:300px;
     padding-bottom: 75px;
+}
+
+#createquestion {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+#createtest {
+    display: inline-block;
+    float: right;
 }
