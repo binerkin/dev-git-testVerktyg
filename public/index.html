@@ -8,7 +8,7 @@
 <body>
 <header id="header">
     <h1>Quizarn</h1>
-    <menubutton><a href="createquiz.html">Skapa Quiz</a></menubutton>
+    <menubutton><a href="index.html">Skapa Quiz</a></menubutton>
     <menubutton><a href="viewquiz.html">Se Quiz</a></menubutton>
 </header>
 
@@ -17,10 +17,11 @@
 
     <form class="form" method="post">
         <h2>Titel</h2>
-        <input type="question" placeholder="Title" id="titleform" name="titleform"/>
+        <input type="title" placeholder="Titel" id="titleform" name="titleform"/>
         <h2>Beskrivning</h2>
-        <input type="describe" placeholder="Description" id="describeform" name="describeform"/>
+        <textarea placeholder="Beskrivning" name="describeform"></textarea>
     </form>
+    <hr>
 
     <div class="questionchoice">
         <h2>Lägg till fråga</h2>
@@ -35,16 +36,16 @@
         <div class="createquestion">
             <h3>Fråga:</h3>
             <form class="form" method="post">
-                <input type="question" placeholder="Fråga" id="fråga" name="fråga"/><br>
+                <textarea placeholder="Fråga" name="question"></textarea>
             </form>
             <form>
-                <input type="radio" name="valquestion" value="Janej" checked> Ja<br>
-                <input type="radio" name="valquestion" value="merval"> Nej<br>
+                <input type="radio" name="answer" value="yes" checked> Ja<br>
+                <input type="radio" name="answer" value="no"> Nej<br>
             </form>
+            <input type="submit" id="createquestion" value="Skapa Fråga"/>
         </div>
 
-        <input type="submit" value="createquestion"/>
-    <input type="submit" value="createtest"/>
+    <input type="submit" id="createtest" value="Skapa Test"/>
 
 </div>
 </body>
