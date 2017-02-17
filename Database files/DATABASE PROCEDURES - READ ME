@@ -1,0 +1,6 @@
+DATABASE PROCEDURES
+
+get_trivia(triviaId) - Fetches information about the trivia for the trivia welcomescreen. Values fetched: name, triviaText, userId, triviaTime, questionCount.
+
+get_question(triviaId, questionsNumber) - Fetches the the questions for the specific trivia and number of questions. Values fetched: questionsId, questionsType, questionText answerId, answerText.
+
