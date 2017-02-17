@@ -56,3 +56,4 @@ CREATE TABLE userAccount(
 		questionId INT(20) NOT NULL,
 		studentResponse INT(20) DEFAULT 0 NOT NULL
 		);
+    
