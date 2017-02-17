@@ -11,15 +11,18 @@
     <menubutton><a href="createquiz.html">Skapa Quiz</a></menubutton>
     <menubutton><a href="viewquiz.html">Se Quiz</a></menubutton>
 </header>
-<div class="form">
+
+
+<div class="formborder">
+
     <form class="form" method="post">
         <h2>Titel</h2>
-        <input type="question" placeholder="Titel" id="titleform" name="titleform"/>
+        <input type="question" placeholder="Title" id="titleform" name="titleform"/>
         <h2>Beskrivning</h2>
-        <input type="describe" placeholder="Beskrivning" id="describeform" name="describeform"/>
-
+        <input type="describe" placeholder="Description" id="describeform" name="describeform"/>
     </form>
-    <div class="createquestion">
+
+    <div class="questionchoice">
         <h2>Lägg till fråga</h2>
         <form>
             <h3>Typ av fråga</h3>
@@ -27,7 +30,9 @@
             <input type="radio" name="valquestion" value="merval"> Flera val<br>
             <input type="radio" name="valquestion" value="öppenfråga"> Öppen Fråga
         </form>
-        <div class="namethequest">
+    </div>
+
+        <div class="createquestion">
             <h3>Fråga:</h3>
             <form class="form" method="post">
                 <input type="question" placeholder="Fråga" id="fråga" name="fråga"/><br>
@@ -37,9 +42,10 @@
                 <input type="radio" name="valquestion" value="merval"> Nej<br>
             </form>
         </div>
+
         <input type="submit" value="createquestion"/>
-    </div>
     <input type="submit" value="createtest"/>
+
 </div>
 </body>
 </html>

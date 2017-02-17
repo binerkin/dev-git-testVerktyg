@@ -4,18 +4,21 @@
     border: solid;
     positioning: fixed;
 }
+
 h1{
     margin-top: 0;
 }
 a{
     text-decoration: none;
 }
+
 menubutton{
     border:solid;
     padding: 4px;
     margin-bottom: 0px;
     display: inline-block;
 }
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -41,6 +44,6 @@ input[type=submit]:hover {
     background-color: red;
 }
 
-.form {
+.formborder {
     border-style: solid;
 }
