@@ -5,8 +5,6 @@ body{
 #header{
     display: inline-block;
     margin: 0;
-    padding-top: 0px;
-    padding-bottom: 0px;
     border: solid;
     border: 1px;
     border-color: #231F20;
@@ -22,7 +20,7 @@ body{
 }
 
 .formborder {
-    padding-top: 125px;
+    padding-top: 100px;
 }
 
 .form {
@@ -90,7 +88,11 @@ input[type=submit]:hover {
 textarea{
     width:300px;
     padding-bottom: 75px;
-    padding-left: 0px;
+    padding-left: 3px;
+}
+
+#describeform {
+    margin-bottom: 20px;
 }
 
 #createquestion {
@@ -116,4 +118,8 @@ textarea{
 #createtest {
     display: inline-block;
     float: right;
+}
+
+#choicequestion {
+    margin-bottom: 20px;
 }
