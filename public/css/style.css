@@ -93,10 +93,18 @@ textarea {  /* Design för textarea */
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: Arial;
 }
 
-#describeform {
+#describeform { /* Textarea form*/
     margin-bottom: 20px;
+}
+
+#questionresult { /* Den högra sid section där frågor ska listas */
+    float: right;
+    border: solid;
+    width: 50%;
+    height: 432px;
 }
 
 #createquestion {
@@ -119,13 +127,6 @@ textarea {  /* Design för textarea */
 
 #answerchoice {
 
-}
-
-#questionresult {
-    float: right;
-    border: solid;
-    width: 50%;
-    height: 432px;
 }
 
 #createtest {
