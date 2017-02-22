@@ -2,7 +2,7 @@ body{
     margin: 0px;
 }
 
-#header{
+#header { /* Nav/header */
     display: inline-block;
     margin: 0;
     border: solid;
@@ -13,13 +13,13 @@ body{
     width:100%;
 }
 
-#menulogo {
+#menulogo { /* Newton logga */
     float: left;
     margin-right: 5px;
     padding-top: 4px;
 }
 
-.formborder {
+.formborder { /* Hela bodyn där all text ligger i */
     padding-top: 100px;
 }
 
@@ -57,7 +57,8 @@ menubutton:hover{
 }
 
 input[type=text], select {
-    width: 100%;
+    width: 351px;
+    height: 28px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -67,7 +68,7 @@ input[type=text], select {
 }
 
 input[type=submit] {
-    width: 120px;
+    width: 85px;
     background-color: black;
     color: white;
     padding: 14px 20px;
@@ -85,10 +86,13 @@ input[type=submit]:hover {
     border-style: solid;
 }
 
-textarea{
-    width:300px;
+textarea {
+    width:350px;
     padding-bottom: 75px;
     padding-left: 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 #describeform {
@@ -100,11 +104,20 @@ textarea{
     display: inline-block;
 }
 
-#choiceresult {
+#severalanswer {
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.choiceresult {
+    display: inline-block;
     margin-top: 20px;
     width: 40%;
-    height: auto;
-    border: solid;
+    height: 200px;
+}
+
+#answerchoice {
 
 }
 

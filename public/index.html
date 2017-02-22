@@ -15,11 +15,12 @@
 
 
 <div class="formborder">
-    <form class="form" method="post">
+
+    <form class="section" method="post">
         <h2>Titel</h2>
-        <input type="title" placeholder="Titel" id="titleform" name="titleform"/>
+        <input type="text" placeholder="Titel" id="titleform" name="titleform"/>
         <h2>Beskrivning</h2>
-        <textarea placeholder="Beskrivning" maxlength="255" id ="describeform" name="describeform"></textarea>
+        <textarea type="text" placeholder="Beskrivning" maxlength="255" id ="describeform" name="describeform"></textarea>
     </form>
     <hr>
 
@@ -31,9 +32,9 @@
         <h2>Lägg till fråga</h2>
         <form id="choicequestion">
             <h3>Typ av fråga</h3>
-            <input type="radio" name="questiontype" value="yesno"checked> Ja/Nej<br>
-            <input type="radio" name="questiontype" value="severalchoice"> Flera val<br>
-            <input type="radio" name="questiontype" value="openquestion"> Öppen Fråga
+            <input type="radio" name="questiontype" id="radio1" value="yesno"checked> Ja/Nej<br>
+            <input type="radio" name="questiontype" id="radio2" value="severalchoice"> Flera val<br>
+            <input type="radio" name="questiontype" id="radio3" value="openquestion"> Öppen Fråga
         </form>
     </div>
 
@@ -42,16 +43,26 @@
             <form class="question" method="post">
                 <textarea placeholder="Fråga" maxlength="255" name="question"></textarea>
             </form>
-            <div class="choiceresult">
-            <form>
-                <p>hej</p>
-            </form>
+
+            <div id="choice1" class="choiceresult">
+                <input type="radio" name="yestype" id="yesradio" value="yes"checked> Ja<br>
+                <input type="radio" name="notype" id="noradio" value="no"> Nej<br>
         </div>
 
-            <input type="submit" id="createquestion" value="Skapa Fråga"/>
-        </div>
+            <div id="choice2" class="choiceresult">
+                <form id="answerform" method="post">
+                    <input type="text" placeholder="Svar 1" id="answerchoice" name="answerchoice" />
+                    <input type="checkbox" name="correctanswer" id="correctanswer" value="correct"> Rätt svar
+                    <input type="submit" id="severalanswer" value="Fler"/>
+                </form>
+            </div>
 
-    <input type="submit" id="createtest" value="Skapa Test"/>
+            <div id="choice3" class="choiceresult">
+            </div>
+        </div>
+    <input type="submit" id="savequestion" value="Spara"/>
+
+    <input type="submit" id="createtest" value="Skapa"/>
 
 
 
