@@ -7,6 +7,7 @@
     <title>Skapa Quiz</title>
 </head>
 <body>
+
 <header id="header">
     <a href="http://www.newton.se" id="menulogo"><img src="img/logo.png" width="70px" height="35px"></a>
     <menubutton><a href="index.html">Skapa Quiz</a></menubutton>
@@ -14,18 +15,19 @@
 </header>
 
 
-<div class="formborder">
+<div class="bodycontent">
 
-    <form class="section" method="post">
+    <section class="section">
         <h2>Titel</h2>
         <input type="text" placeholder="Titel" id="titleform" name="titleform"/>
         <h2>Beskrivning</h2>
-        <textarea type="text" placeholder="Beskrivning" maxlength="255" id ="describeform" name="describeform"></textarea>
-    </form>
+        <textarea placeholder="Beskrivning" maxlength="255" id ="describeform" name="describeform"></textarea>
+    </section>
+
     <hr>
 
 
-    <div class="form">
+    <section class="section">
         <aside id="questionresult">
             <p>1. Var bor Peter?</p>
         </aside>
@@ -36,9 +38,9 @@
             <input type="radio" name="questiontype" id="radio2" value="severalchoice"> Flera val<br>
             <input type="radio" name="questiontype" id="radio3" value="openquestion"> Öppen Fråga
         </form>
-    </div>
+    </section>
 
-        <div class="form">
+        <section class="section">
             <h3>Fråga:</h3>
             <form class="question" method="post">
                 <textarea placeholder="Fråga" maxlength="255" name="question"></textarea>
@@ -59,7 +61,8 @@
 
             <div id="choice3" class="choiceresult">
             </div>
-        </div>
+        </section>
+
     <input type="submit" id="savequestion" value="Spara"/>
 
     <input type="submit" id="createtest" value="Skapa"/>
