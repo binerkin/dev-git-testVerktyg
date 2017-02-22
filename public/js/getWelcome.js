@@ -10,10 +10,15 @@ $('document').ready(function(){
         var result='';
 
         $.each(data, function(key, item){
-            result+='Prov: ';
+            result+='Du har fått ett prov från: ';
+            result+=item.firstname;
+            result+=', Prov: ';
             result+=item.name;
-            result+=' Tid: ';
+            result+=', Antal frågor: ';
+            result+= item.questionCount;
+            result+=', Tid: ';
             result+= item.triviaTime;
+            result+=', min.'
         });
 
         $('#container').html(result);
