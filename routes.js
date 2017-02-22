@@ -21,5 +21,10 @@ module.exports = {
         main.get('/welcome/', function(req, res){
             sql.getTestWelcome(res);
         });
+
+        /*Route for welcome screen details 2*/
+        main.get('/welcome2/:id/', function(req, res){
+            sql.getTestWelcome2(req.params.id, res);
+        });
     }
 }

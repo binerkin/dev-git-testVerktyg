@@ -29,6 +29,16 @@ function mysqlModels(){
         });
     };
 
+    this.getTestWelcome2 = function(id, res){
+
+        connection.acquire(function(err, con){
+            con.query('call get_trivia( ? )', id,  function(err,result){
+                con.release;
+                res.send(result);
+            });
+        });
+    };
+
 
 }
 
