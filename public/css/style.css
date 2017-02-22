@@ -8,7 +8,7 @@ body{
     border: solid;
     border: 1px;
     border-color: #231F20;
-    position: fixed;
+    /*position: fixed;*/
     background-color: #231F20;
     width:100%;
 }
@@ -122,4 +122,8 @@ textarea{
 
 #choicequestion {
     margin-bottom: 20px;
+}
+
+a#temp{
+    color:black;
 }

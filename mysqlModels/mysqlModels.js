@@ -22,17 +22,19 @@ function mysqlModels(){
     this.getTestWelcome = function(res){
 
         connection.acquire(function(err, con){
-            con.query('call get_trivia(1)', function(err,result){
+            con.query('SELECT * FROM trivia', function(err,result){
+            //con.query('call get_trivia(1)', function(err,result){
                 con.release;
                 res.send(result);
             });
         });
     };
 
+    /*function for calling stored procedure with id for welcome site*/
     this.getTestWelcome2 = function(id, res){
 
         connection.acquire(function(err, con){
-            con.query('call get_trivia( ? )', id,  function(err,result){
+            con.query('SELECT * FROM trivia WHERE triviaId = ?', id,  function(err,result){
                 con.release;
                 res.send(result);
             });
