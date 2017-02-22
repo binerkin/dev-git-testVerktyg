@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
     <title>Skapa Quiz</title>
 </head>
 <body>
@@ -41,10 +42,9 @@
             <form class="question" method="post">
                 <textarea placeholder="Fråga" maxlength="255" name="question"></textarea>
             </form>
-            <div id="choiceresult">
+            <div class="choiceresult">
             <form>
-                <input type="radio" name="answer" value="yes" checked> Ja<br>
-                <input type="radio" name="answer" value="no"> Nej<br>
+                <p>hej</p>
             </form>
         </div>
 
@@ -53,6 +53,8 @@
 
     <input type="submit" id="createtest" value="Skapa Test"/>
 
+    <!-- JQuery -->
+    <script src="js/radioscript.js"></script>
 </div>
 </body>
 </html>
