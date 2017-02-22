@@ -28,6 +28,21 @@ VALUES ('1', 'Grön');
 INSERT INTO answer (questionId, answerText)
 VALUES ('1', 'Svart');
 
+INSERT INTO question (triviaId, questionType, questionNumber, questionText, correctAnswer)
+VALUES ('1','1','2','Vart växer blåbär?','3');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('2', 'I djungeln');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('2', 'I molnen');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('2', 'I skogen');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('2', 'I grottor');
+
 
 -- CREATES STUDENT RESULT (INCORRECT ANSWER)
 INSERT INTO studentResult (studentId, triviaId, questionId, studentResponse)

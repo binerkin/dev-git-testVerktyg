@@ -1,4 +1,4 @@
--- GETS INFOMRATION FOR TRIVIA WELCOME SCREEN (Insert triviaId)
+-- FETCHES INFOMRATION FOR TRIVIA WELCOME SCREEN (Insert triviaId)
 
 DROP PROCEDURE IF EXISTS get_trivia;
 DELIMITER $$
@@ -11,3 +11,45 @@ WHERE T.triviaId = tId;
 
 END $$
 DELIMITER ;
+
+
+
+
+-- FETCHES QUESTIONS
+DROP PROCEDURE IF EXISTS get_questions;
+DELIMITER $$
+CREATE PROCEDURE get_questions(IN tId INT)
+BEGIN
+
+SELECT Q.questionId, Q.questionType, Q.questionNumber, Q.questionText, A.answerId, A.answerText
+FROM question AS Q
+INNER JOIN answer AS A
+ON Q.questionId = A.questionID
+WHERE Q.triviaID = 1;
+
+END $$
+DELIMITER ;
+
+
+
+
+-- VERIFY USERS PASSWORD
+DROP PROCEDURE IF EXISTS verify_user;
+DELIMITER $$
+CREATE PROCEDURE verify_user(IN uId INT, suPass INT)
+BEGIN
+
+DECLARE correctPassword = (SELECT password FROM userAccount WHERE userId IS uId);
+
+
+IF suPass = correctPassword THEN
+	return Y;
+	
+	ELSE;
+	return N;	
+
+
+END $$
+DELIMITER ;
+
+
