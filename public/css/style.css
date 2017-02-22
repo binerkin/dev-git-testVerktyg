@@ -107,36 +107,42 @@ textarea {  /* Design för textarea */
     height: 432px;
 }
 
-#createquestion {
+#choicequestion { /* Där man gör frågeval, t.ex. Ja/Nej, Alternativ etc.*/
+    margin-bottom: 20px;
+}
+
+#createquestion { /* Skapa fråga - formulär */
     margin-top: 25px;
     display: inline-block;
 }
 
-#severalanswer {
-    width: 60px;
-    height: 40px;
-    margin-left: 10px;
-}
-
-.choiceresult {
+.choiceresult { /* Klass där man kopplar svarsalternativ med jQuery */
     display: inline-block;
     margin-top: 20px;
     width: 40%;
     height: 200px;
 }
 
-#answerchoice {
+
+#severalanswer { /* Knapp-funktion som ska skapa nya formulärer */
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+#answerchoice { /** Formulär där man skriver in svar **/
 
 }
 
-#createtest {
+#savequestion { /** Knapp som ska spara frågor **/
+
+}
+
+#createquiz { /** Knapp som ska skapar quizen och ska koppla ihop mySQL */
     display: inline-block;
     float: right;
 }
 
-#choicequestion {
-    margin-bottom: 20px;
-}
 
 a#temp{
     color:black;
