@@ -31,7 +31,7 @@ $('document').ready(function(){
    $('#addForm').on('click',function(e){
        console.log('test');
        e.preventDefault();
-       $('#formToBe').append(formItem);
+       $('.formToBe').append(formItem);
 
    });
 });
