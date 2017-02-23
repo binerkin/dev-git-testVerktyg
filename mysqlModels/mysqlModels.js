@@ -18,23 +18,13 @@ function mysqlModels(){
         });
     };
 
-    /*function for inner join request on welcome site*/
-    this.getTestWelcome = function(res){
 
-        connection.acquire(function(err, con){
-            //con.query('SELECT * FROM trivia', function(err,result){
-            con.query('SELECT t.*, u.firstname FROM trivia as t INNER JOIN userAccount as u ON t.userId=u.userId', function(err,result){
-                con.release;
-                res.send(result);
-            });
-        });
-    };
 
     /*function for calling join with id for welcome site*/
     this.getTestWelcome2 = function(id, res){
 
         connection.acquire(function(err, con){
-            con.query('SELECT t.*, u.firstname FROM trivia as t INNER JOIN userAccount as u ON t.userId=u.userId WHERE t.userId = ?', id,  function(err,result){
+            con.query('SELECT t.*, u.uFirstname FROM trivia as t INNER JOIN userAccount as u ON t.userId=u.userId WHERE t.triviaId = ?', id,  function(err,result){
                 con.release;
                 res.send(result);
             });
@@ -43,7 +33,7 @@ function mysqlModels(){
 
 
 
-    /*function for getting test add id*/
+    /*function for getting test (add id)*/
     this.getTest = function (res) {
 
         connection.acquire(function(err, con){

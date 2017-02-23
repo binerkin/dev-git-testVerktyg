@@ -5,7 +5,7 @@ $('document').ready(function(){
 
     var id = 1;
 
-    $.getJSON('http://127.0.0.1:8000/welcome2/'+ id, welcome);
+    $.getJSON('http://127.0.0.1:8000/welcome/'+ id, welcome);
 
     function welcome(data){
         console.log('test');
@@ -13,9 +13,9 @@ $('document').ready(function(){
 
         $.each(data, function(key, item){
             result+='<p>Provutställare: ';
-            result+=item.firstname;
+            result+=item.uFirstname;
             result+='</p> <p>Prov: ';
-            result+=item.name;
+            result+=item.triviaName;
             result+='</p><p>Antal frågor: ';
             result+= item.questionCount;
             result+='</p><p>Tid: ';

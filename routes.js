@@ -17,13 +17,10 @@ module.exports = {
             sql.get(res);
         });
 
-        /*Route for welcome screen details*/
-        main.get('/welcome/', function(req, res){
-            sql.getTestWelcome(res);
-        });
+
 
         /*Route for welcome screen details with id*/
-        main.get('/welcome2/:id/', function(req, res){
+        main.get('/welcome/:id/', function(req, res){
             sql.getTestWelcome2(req.params.id, res);
         });
 
