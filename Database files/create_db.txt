@@ -44,8 +44,10 @@ CREATE TABLE trivia(
 CREATE TABLE answer(
 	answerId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	questionId INT(20) NOT NULL,
+	triviaId INT(20) NOT NULL,
 	answerText TEXT NOT NULL,
-	FOREIGN KEY (questionId) REFERENCES question(questionId)
+	FOREIGN KEY (questionId) REFERENCES question(questionId),
+	FOREIGN KEY (triviaId) REFERENCES trivia(triviaId)
 	);
 
 CREATE TABLE student(
