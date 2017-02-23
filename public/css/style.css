@@ -82,6 +82,17 @@ input[type=submit] { /* Design för alla knappar som har type=submit */
     cursor: pointer;
 }
 
+input[type=button] { /** T.ex. knappen som skapar fler formulärer **/
+    width: 57px;
+    height: 42px;
+    background-color: black;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 input[type=submit]:hover { /* När man trycker på knapparna */
     background-color: red;
 }
@@ -119,28 +130,25 @@ textarea {  /* Design för textarea */
     margin-bottom: 20px;
 }
 
-#createquestion { /* Skapa fråga - formulär */
-    margin-top: 25px;
-    display: inline-block;
+.createquestion { /* Skapa fråga - formulär */
 }
 
 .choiceresult { /* Klass där man kopplar svarsalternativ med jQuery */
     display: inline-block;
     margin-top: 20px;
-    width: 40%;
-    height: 200px;
+    width: 50%;
+    height: auto;
 }
 
 #createquiz { /** Knapp som ska skapar quizen och ska koppla ihop mySQL */
     display: inline-block;
     float: right;
     margin-right: 15px;
-    magrin-bottom: 15px;
 }
 
 #severalanswer { /* Knapp-funktion som ska skapa nya formulärer */
     width: 60px;
-    height: 40px;
+    height: auto;
     margin-left: 10px;
 }
 
@@ -148,9 +156,19 @@ textarea {  /* Design för textarea */
 
 }
 
+#addForm { /** Knappen som skapar fler formulärer **/
+    margin-left: 20px;
+}
+
 #savequestion { /** Knapp som ska spara frågor och få dem listade i #questionresult **/
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 a#temp{ /** ? **/
     color:black;
+}
+
+a#temp {
+    margin-top: 30px;
 }

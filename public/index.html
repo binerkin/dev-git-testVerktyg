@@ -55,7 +55,6 @@
             <h3 id="test">Fråga:</h3>
             <form class="createquestion">
                 <textarea placeholder="Fråga" maxlength="255" name="question"></textarea>
-            </form>
 
             <div id="choice1" class="choiceresult">
                 <input type="radio" name="yestype" id="yesradio" value="yes"checked> Ja<br>
@@ -64,15 +63,20 @@
 
             <div id="choice2" class="choiceresult">
                 <form id="answerform" method="post">
-                    <input type="text" placeholder="Svar 1" id="answerchoice" name="answerchoice" />
-                    <input type="checkbox" name="correctanswer" id="correctanswer" value="correct"> Rätt svar
-                    <input type="submit" id="severalanswer" value="Fler"/>
+                    <input type="text" placeholder="Svar" id="answerchoice" name="answerchoice" />
+                    <input type="checkbox" name="correctanswer" class="correctanswer" value="correct"> Rätt svar
+                    <input type="button" id="addForm" value="Fler">
                 </form>
             </div>
 
             <div id="choice3" class="choiceresult">
             </div>
+
+            <div id="formToBe">
+            </div>
+
             <input type="submit" id="savequestion" value="Spara"/>
+            </form>
         </section>
 
 
