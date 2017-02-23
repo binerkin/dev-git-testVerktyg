@@ -42,6 +42,20 @@ function mysqlModels(){
     };
 
 
+
+    /*function for getting test add id*/
+    this.getTest = function (res) {
+
+        connection.acquire(function(err, con){
+            con.query('SELECT * FROM question', function(err, result){
+                con.release;
+                res.send(result);
+            });
+        });
+
+    }
+
+
 }
 
 module.exports = new mysqlModels();

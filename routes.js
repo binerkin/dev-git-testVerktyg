@@ -26,5 +26,10 @@ module.exports = {
         main.get('/welcome2/:id/', function(req, res){
             sql.getTestWelcome2(req.params.id, res);
         });
+
+        /*Rout for getting test (add id)*/
+        main.get('/testget/', function(req, res){
+           sql.getTest(res);
+        });
     }
 }

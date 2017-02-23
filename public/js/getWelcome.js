@@ -2,8 +2,8 @@
  * Created by johan on 2017-02-22.
  */
 $('document').ready(function(){
-
-    $.getJSON('http://127.0.0.1:8000/welcome', welcome);
+    var id =1;
+    $.getJSON('http://127.0.0.1:8000/welcome/'+id, welcome);
 
     function welcome(data){
         console.log('test');
