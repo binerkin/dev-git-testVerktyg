@@ -30,11 +30,11 @@ function mysqlModels(){
         });
     };
 
-    /*function for calling stored procedure with id for welcome site*/
+    /*function for calling join with id for welcome site*/
     this.getTestWelcome2 = function(id, res){
 
         connection.acquire(function(err, con){
-            con.query('SELECT * FROM trivia WHERE triviaId = ?', id,  function(err,result){
+            con.query('SELECT t.*, u.firstname FROM trivia as t INNER JOIN userAccount as u ON t.userId=u.userId WHERE t.userId = ?', id,  function(err,result){
                 con.release;
                 res.send(result);
             });
