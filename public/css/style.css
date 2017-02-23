@@ -15,7 +15,7 @@ a:hover {
 
 }
 
-#navbar { /* Navigation bar */
+.navbar { /* Navigation bar */
     display: inline-block;
     margin: 0;
     border: solid;
