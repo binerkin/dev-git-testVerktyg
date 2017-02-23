@@ -10,22 +10,24 @@ USE studentTrivia;
 	DROP TABLE IF EXISTS answer;
 	DROP TABLE IF EXISTS student;
 	DROP TABLE IF EXISTS studentResult;
+	DROP TABLE IF EXISTS studentResponse;
 
 CREATE TABLE userAccount(
 	userId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	firstname VARCHAR(20) DEFAULT "" NOT NULL,
-	surname VARCHAR(20) DEFAULT "" NOT NULL,
-	eMail VARCHAR(20) DEFAULT "" NOT NULL,
+	uFirstname VARCHAR(20) DEFAULT "" NOT NULL,
+	uSurname VARCHAR(20) DEFAULT "" NOT NULL,
+	ueMail VARCHAR(20) DEFAULT "" NOT NULL,
 	password VARCHAR(20) DEFAULT "" NOT NULL
 	);
 
 CREATE TABLE trivia(
 	triviaId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	userID INT(20) NOT NULL,
-	name VARCHAR(20) DEFAULT "" NOT NULL,
+	triviaName VARCHAR(20) DEFAULT "" NOT NULL,
 	triviaText VARCHAR(150) DEFAULT "",
 	questionCount INT(20) DEFAULT 0 NOT NULL,
-	triviaTime INT(20) DEFAULT 0 NOT NULL
+	triviaTime INT(20) DEFAULT 0 NOT NULL,
+	FOREIGN KEY (userId) REFERENCES userAccount(userId)
 	);
 
  CREATE TABLE question(
@@ -33,27 +35,39 @@ CREATE TABLE trivia(
 	triviaId INT(20) NOT NULL,
 	questionType VARCHAR(20) DEFAULT "" NOT NULL,
 	questionNumber INT(20) DEFAULT 0 NOT NULL,
+	answerCount INT(20) DEFAULT 0 NOT NULL,
 	questionText VARCHAR(150) DEFAULT "" NOT NULL,
-	correctAnswer INT(20) DEFAULT 0 NOT NULL
+	correctAnswer INT(20) DEFAULT 0 NOT NULL,
+	FOREIGN KEY (triviaId) REFERENCES trivia(triviaId)
 	);
 
 CREATE TABLE answer(
 	answerId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	questionId INT(20) NOT NULL,
-	answerText VARCHAR(20) DEFAULT "" NOT NULL
+	answerText VARCHAR(150) DEFAULT "" NOT NULL,
+	FOREIGN KEY (questionId) REFERENCES question(questionId)
 	);
 
 CREATE TABLE student(
 	studentId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	firstname VARCHAR(20) DEFAULT "" NOT NULL,
-	surname VARCHAR(20) DEFAULT "" NOT NULL,
-	eMail VARCHAR(20) DEFAULT "" NOT NULL
+	sFirstname VARCHAR(20) DEFAULT "" NOT NULL,
+	sSurname VARCHAR(20) DEFAULT "" NOT NULL,
+	seMail VARCHAR(20) DEFAULT "" NOT NULL
 	);
 
-CREATE TABLE studentResult(
-	resultId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE studentTrivia(
+	studentTriviaId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	studentId INT(20) NOT NULL,
 	triviaId INT(20) NOT NULL,
+	FOREIGN KEY (studentId) REFERENCES student(studentId),
+	FOREIGN KEY (triviaId) REFERENCES trivia(triviaId)
+	);
+
+CREATE TABLE studentResponse(
+	responseId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	studentTriviaId INT(20) NOT NULL,
 	questionId INT(20) NOT NULL,
-	studentResponse INT(20) DEFAULT 0 NOT NULL
+	studentAnswer VARCHAR(150) DEFAULT "" NOT NULL,
+	FOREIGN KEY (studentTriviaId) REFERENCES studentTrivia(studentTriviaId),
+	FOREIGN KEY (questionId) REFERENCES question(questionId)
 	);
