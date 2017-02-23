@@ -24,19 +24,24 @@ $('document').ready(function(){
             result+='<p>' + item.questionText + '</p>';
 
             /*Switch för frågetyp*/
+            /*
             switch(item.questionType){
                 case 1:
                     inputType+='<input type="radio" name="singleChoice" value="yes">';
                     inputType+='<input type="radio" name="singleChoice" value="no">';
                     break;
                 case 2:
-                    inputType+='<input type=">'
-
-
-
+                    inputType+='<input type="checkbox" name="checkbox1" value="1">';
+                    inputType+='<input type="checkbox" name="checkbox2" value="2">';
+                    inputType+='<input type="checkbox" name="checkbox2" value="3">';
+                    break;
+                case 3:
+                    inputType+='<input type="text" name = "textanswer">'
+                    break;
             }
 
-            result+='<input type="text>';
+            result+=inputType;
+            */
         });
 
         testForm.append(result);

@@ -37,7 +37,7 @@ function mysqlModels(){
     this.getTest = function (res) {
 
         connection.acquire(function(err, con){
-            con.query('SELECT * FROM question', function(err, result){
+            con.query('SELECT * FROM question WHERE triviaId = 1', function(err, result){
                 con.release;
                 res.send(result);
             });
