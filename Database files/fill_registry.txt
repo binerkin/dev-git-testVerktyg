@@ -79,7 +79,7 @@ VALUES ('3','Världens 7 Underverk','En trivia om världens 7 underverk', '3', '
 
 -- CREATES QUESTION 1 (SINGLE-ANSWER)
 INSERT INTO question (triviaId, questionType, questionNumber, answerCount, questionText, correctAnswer)
-VALUES ('2','2','1','4','Vilka av dessa räknas som världens underverg?','23');
+VALUES ('2','2','1','4','Vilka av dessa räknas som världens underverk?','23');
 
 INSERT INTO answer (questionId, triviaId, answerText)
 VALUES ('1', '2', 'Machu Piccu');
