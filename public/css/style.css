@@ -165,10 +165,6 @@ textarea {  /* Design för textarea */
     margin-bottom: 20px;
 }
 
-a#temp{ /** ? **/
+a#temp { 
     color:black;
-}
-
-a#temp {
-    margin-top: 30px;
 }

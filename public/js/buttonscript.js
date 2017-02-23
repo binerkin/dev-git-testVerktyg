@@ -6,7 +6,9 @@
 
 /**
 $(document).ready(function(){
-    $("#severalanswer").click(function(){
+
+    $("#severalanswer").on('click', function(e){
+       e.preventDefault();
        $("#test").hide();
     });
 

@@ -10,15 +10,17 @@ $('document').ready(function(){
         var result='';
 
         $.each(data, function(key, item){
-            result+='Du har fått ett prov från: ';
+            result+='<p>Provutställare: ';
             result+=item.firstname;
-            result+=', Prov: ';
+            result+='</p> <p>Prov: ';
             result+=item.name;
-            result+=', Antal frågor: ';
+            result+='</p><p>Antal frågor: ';
             result+= item.questionCount;
-            result+=', Tid: ';
+            result+='</p><p>Tid: ';
             result+= item.triviaTime;
-            result+=', min.'
+            result+=' min</p>';
+            result+='<nav class="navbutton"><a id="startTest">Starta provet!</a></nav>';
+
         });
 
         $('#container').html(result);
