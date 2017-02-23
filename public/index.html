@@ -8,28 +8,38 @@
 </head>
 <body>
 
-<header id="header">
-    <a href="http://www.newton.se" id="menulogo"><img src="img/logo.png" width="70px" height="35px"></a>
-    <menubutton><a href="index.html">Skapa Quiz</a></menubutton>
-    <menubutton><a href="viewquiz.html">Se Quiz</a></menubutton>
+<header id="navbar">
+    <a href="http://www.newton.se" id="navlogo"><img src="img/logo.png" width="70px" height="35px"></a>
+    <nav class="navbutton"><a href="index.html">Skapa Quiz</a></nav>
+    <nav class="navbutton"><a href="viewquiz.html">Se Quiz</a></nav>
 </header>
 
 
-<div class="bodycontent">
+<main class="bodycontent">
 
     <section class="section">
+
+
         <h2>Titel</h2>
         <input type="text" placeholder="Titel" id="titleform" name="titleform"/>
         <h2>Beskrivning</h2>
         <textarea placeholder="Beskrivning" maxlength="255" id ="describeform" name="describeform"></textarea>
+
+
     </section>
 
-    <hr>
 
+<br><hr><br>
 
     <section class="section">
         <aside id="questionresult">
             <p>1. Var bor Peter?</p>
+            <p>2. Hur gammal är Peter?</p>
+            <p>3. Vad vill Peter?</p>
+            <p>4. Hur lång är Peter?</p>
+            <p>5. Var jobbar Peter?</p>
+            <p>6. Vilken bil har Peter?</p>
+            <input type="submit" id="createquiz" value="Skapa"/>
         </aside>
 
         <h2>Lägg till fråga</h2>
@@ -62,17 +72,14 @@
 
             <div id="choice3" class="choiceresult">
             </div>
+            <input type="submit" id="savequestion" value="Spara"/>
         </section>
-
-    <input type="submit" id="savequestion" value="Spara"/>
-
-    <input type="submit" id="createquiz" value="Skapa"/>
 
 
 
     <!-- JQuery -->
     <script src="js/radioscript.js"></script>
-</div>
+</main>
 
 <!--temporary link-->
 <a id="temp" href="pages/welcome.html">tillfällig länk</a>

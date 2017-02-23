@@ -1,32 +1,5 @@
-body{
-    margin: 0px;
-}
-
-#header { /* Nav/header */
-    display: inline-block;
-    margin: 0;
-    border: solid;
-    border: 1px;
-    border-color: #231F20;
-    /*position: fixed;*/
-    background-color: #231F20;
-    width:100%;
-}
-
-#menulogo { /* Newton logga */
-    float: left;
-    margin-right: 5px;
-    padding-top: 4px;
-}
-
-.bodycontent { /* Hela bodyn där all text ligger i */
-    padding-top: 100px;
-    /*border-style: solid;*/
-}
-
-.section { /* Section/stycke */
-    margin-left: 30px;
-    /*border-style: solid;*/
+body {
+    Font-family: Arial;
 }
 
 h1 {
@@ -42,7 +15,24 @@ a:hover {
 
 }
 
-menubutton { /* Knappar i nav/header */
+#navbar { /* Navigation bar */
+    display: inline-block;
+    margin: 0;
+    border: solid;
+    border: 1px;
+    border-color: #231F20;
+    /*position: fixed;*/
+    background-color: #231F20;
+    width:100%;
+}
+
+#navlogo { /* Newton logga */
+    float: left;
+    margin-right: 5px;
+    padding-top: 4px;
+}
+
+.navbutton { /* Knappar i navbar */
     margin-top: 0;
     border: solid;
     border-width: 1px;
@@ -54,8 +44,20 @@ menubutton { /* Knappar i nav/header */
     color: grey;
 }
 
-menubutton:hover{  /* När man trycker på knapparna */
+.navbutton:hover {  /* När man trycker på knapparna */
     background-color: grey;
+}
+
+.bodycontent { /* Hela bodyn där all text ligger i */
+    padding-top: 100px;
+}
+
+.section { /* Section/hållare */
+    margin-left: 30px;
+
+/** border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;**/
 }
 
 input[type=text], select { /* Design för alla formulärer som har type=text */
@@ -96,16 +98,22 @@ textarea {  /* Design för textarea */
     font-family: Arial;
 }
 
-#describeform { /* Textarea form*/
+#describeform { /* Textarea formulär*/
     margin-bottom: 20px;
 }
 
-#questionresult { /* Den högra sid section där frågor ska listas */
+#questionresult { /* Den högra sid-section där frågor ska listas */
     float: right;
-    border: solid;
     width: 50%;
-    height: 432px;
+    height: auto;
+
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 10px;
 }
+
 
 #choicequestion { /* Där man gör frågeval, t.ex. Ja/Nej, Alternativ etc.*/
     margin-bottom: 20px;
@@ -123,6 +131,12 @@ textarea {  /* Design för textarea */
     height: 200px;
 }
 
+#createquiz { /** Knapp som ska skapar quizen och ska koppla ihop mySQL */
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    magrin-bottom: 15px;
+}
 
 #severalanswer { /* Knapp-funktion som ska skapa nya formulärer */
     width: 60px;
@@ -134,16 +148,9 @@ textarea {  /* Design för textarea */
 
 }
 
-#savequestion { /** Knapp som ska spara frågor **/
-
+#savequestion { /** Knapp som ska spara frågor och få dem listade i #questionresult **/
 }
 
-#createquiz { /** Knapp som ska skapar quizen och ska koppla ihop mySQL */
-    display: inline-block;
-    float: right;
-}
-
-
-a#temp{
+a#temp{ /** ? **/
     color:black;
 }
