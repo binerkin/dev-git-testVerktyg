@@ -5,11 +5,11 @@ $(document).ready(function(){
     $("#savequestion").click(function(){
         var question = $("#question").val();
         localStorage.setItem("question", question);
-        var storedquestion = localStorage.getItem("question");
-        console.log(storedquestion);
+
+        var questiontype = $('input[name=questiontype]:checked').val();
+        localStorage.setItem("questiontype", questiontype);
+        var testquestiontype = localStorage.getItem(questiontype);
+        console.log(testquestiontype);
     });
-    $("#createquiz").click(function(){
-        var testquestion = localStorage.getItem("question");
-        console.log(testquestion);
-    });
+
 });
