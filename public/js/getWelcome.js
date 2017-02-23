@@ -3,9 +3,9 @@
  */
 $('document').ready(function(){
 
-    var id =1;
+    var id = 1;
 
-    $.getJSON('http://127.0.0.1:8000/welcome2/'+id, welcome);
+    $.getJSON('http://127.0.0.1:8000/welcome2/'+ id, welcome);
 
     function welcome(data){
         console.log('test');
