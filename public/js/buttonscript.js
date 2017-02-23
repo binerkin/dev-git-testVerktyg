@@ -4,8 +4,6 @@
  * Skapar flera formulärer
  */
 
-
-
 var formItem = $("<input type ='text' placeholder='Annat svar'><input type='checkbox' name='correctanswer' class='correctanswer' value='correct'> Rätt svar</input>");
 
 $('document').ready(function(){
