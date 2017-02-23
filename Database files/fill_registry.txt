@@ -1,22 +1,41 @@
--- CREATES USER
+-- CREATES USERS
 INSERT INTO userAccount (uFirstname, uSurname, ueMail, password)
 VALUES ('Hans','Göransson','hasseg@gmail.com','hasseman123');
 
--- CREATES STUDENT 2X
+INSERT INTO userAccount (uFirstname, uSurname, ueMail, password)
+VALUES ('Peter','Hudin','pettelino@gmail.com','houdini123');
+
+INSERT INTO userAccount (uFirstname, uSurname, ueMail, password)
+VALUES ('Sverker','Persson','the_sverker@gmail.com','svimpeln45');
+
+-- CREATES STUDENTS
 INSERT INTO student (sFirstname, sSurname, seMail)
 VALUES ('Tim','Larsson','360ns@gmail.com');
 
 INSERT INTO student (Sfirstname, sSurname, seMail)
 VALUES ('Linn','Augustus','shadow_gur92@gmail.com');
 
--- CREATES TRIVIA
-INSERT INTO trivia (userID, triviaName, questionCount, triviaTime)
-VALUES ('1','Blåbär','1','5');
+INSERT INTO student (Sfirstname, sSurname, seMail)
+VALUES ('Adam','Bogren','eden@gmail.com');
 
-INSERT INTO question (triviaId, questionType, questionNumber, answerNum, questionText, correctAnswer)
+INSERT INTO student (Sfirstname, sSurname, seMail)
+VALUES ('Bo','Fink','finken@gmail.com');
+
+INSERT INTO student (Sfirstname, sSurname, seMail)
+VALUES ('Johan','Jansson','joja@gmail.com');
+
+
+
+
+-- CREATES TRIVIA 1
+INSERT INTO trivia (userID, triviaName, triviaText, questionCount, triviaTime)
+VALUES ('1','Blåbär','En trivia om blåbär =D', '3', '5');
+
+-- CREATES QUESTION 1 (SINGLE-ANSWER)
+INSERT INTO question (triviaId, questionType, questionNumber, answerCount, questionText, correctAnswer)
 VALUES ('1','1','1','4','Vad för färg har blåbär?','2');
 
-INSERT INTO answer (questionId, answerNum, answerText)
+INSERT INTO answer (questionId, answerText)
 VALUES ('1', 'Röd');
 
 INSERT INTO answer (questionId, answerText)
@@ -28,20 +47,78 @@ VALUES ('1', 'Grön');
 INSERT INTO answer (questionId, answerText)
 VALUES ('1', 'Svart');
 
-INSERT INTO question (triviaId, questionType, questionNumber, questionText, correctAnswer)
-VALUES ('1','1','2','4','Vart växer blåbär?','3');
+-- CREATES QUESTION 2 (MULTI-ANSWER)
+INSERT INTO question (triviaId, questionType, questionNumber, answerCount, questionText, correctAnswer)
+VALUES ('1','2','2','4','Vart växer blåbär?','34');
 
 INSERT INTO answer (questionId, answerText)
-VALUES ('2', 'I djungeln');
+VALUES ('1', 'Antarktis');
 
 INSERT INTO answer (questionId, answerText)
-VALUES ('2', 'I molnen');
+VALUES ('1', 'På månen');
 
 INSERT INTO answer (questionId, answerText)
-VALUES ('2', 'I skogen');
+VALUES ('1', 'I Asien');
 
 INSERT INTO answer (questionId, answerText)
-VALUES ('2', 'I grottor');
+VALUES ('1', 'I Europa');
+
+-- CREATES QUESTION 2 (FREE-ANSWER)
+INSERT INTO question (triviaId, questionType, questionNumber, answerCount, questionText, correctAnswer)
+VALUES ('1','3','3','1','Vad tycker du om blåbär?','0');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('1', 'null');
+
+
+
+
+-- CREATES TRIVIA 2
+INSERT INTO trivia (userID, triviaName, triviaText, questionCount, triviaTime)
+VALUES ('3','Världens 7 Underverk','En trivia om världens 7 underverk', '3', '5');
+
+-- CREATES QUESTION 1 (SINGLE-ANSWER)
+INSERT INTO question (triviaId, questionType, questionNumber, answerCount, questionText, correctAnswer)
+VALUES ('2','2','1','4','Vilka av dessa räknas som världens underverg?','23');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('1', 'Machu Piccu');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('1', 'Borgholms Slott');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('1', 'Taj Mahal');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('1', 'Eriksbergs Hallen');
+
+-- CREATES QUESTION 2 (MULTI-ANSWER)
+INSERT INTO question (triviaId, questionType, questionNumber, answerCount, questionText, correctAnswer)
+VALUES ('2','1','2','4','Vart ligger Petra?','34');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('2', 'Afghanistan');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('2', 'Pakistan');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('2', 'Jordanien');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('2', 'Libyen');
+
+-- CREATES QUESTION 2 (FREE-ANSWER)
+INSERT INTO question (triviaId, questionType, questionNumber, answerCount, questionText, correctAnswer)
+VALUES ('2','3','3','1','Vad gör Cristo Redentor till ett av världens 7 nya underverk?','0');
+
+INSERT INTO answer (questionId, answerText)
+VALUES ('3', 'null');
+
+
+
+
 
 
 -- CREATES STUDENT RESULT (INCORRECT ANSWER, CORRECT ANSWER)

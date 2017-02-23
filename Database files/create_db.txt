@@ -16,7 +16,7 @@ CREATE TABLE userAccount(
 	userId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	uFirstname VARCHAR(20) DEFAULT "" NOT NULL,
 	uSurname VARCHAR(20) DEFAULT "" NOT NULL,
-	ueMail VARCHAR(20) DEFAULT "" NOT NULL,
+	ueMail VARCHAR(100) DEFAULT "" NOT NULL,
 	password VARCHAR(20) DEFAULT "" NOT NULL
 	);
 
@@ -36,7 +36,7 @@ CREATE TABLE trivia(
 	questionType VARCHAR(20) DEFAULT "" NOT NULL,
 	questionNumber INT(20) DEFAULT 0 NOT NULL,
 	answerCount INT(20) DEFAULT 0 NOT NULL,
-	questionText VARCHAR(150) DEFAULT "" NOT NULL,
+	questionText TEXT NOT NULL,
 	correctAnswer INT(20) DEFAULT 0 NOT NULL,
 	FOREIGN KEY (triviaId) REFERENCES trivia(triviaId)
 	);
@@ -44,7 +44,7 @@ CREATE TABLE trivia(
 CREATE TABLE answer(
 	answerId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	questionId INT(20) NOT NULL,
-	answerText VARCHAR(150) DEFAULT "" NOT NULL,
+	answerText TEXT NOT NULL,
 	FOREIGN KEY (questionId) REFERENCES question(questionId)
 	);
 
@@ -52,7 +52,7 @@ CREATE TABLE student(
 	studentId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	sFirstname VARCHAR(20) DEFAULT "" NOT NULL,
 	sSurname VARCHAR(20) DEFAULT "" NOT NULL,
-	seMail VARCHAR(20) DEFAULT "" NOT NULL
+	seMail VARCHAR(100) DEFAULT "" NOT NULL
 	);
 
 CREATE TABLE studentTrivia(
